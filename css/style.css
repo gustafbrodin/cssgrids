@@ -4,54 +4,20 @@ body {
 	box-sizing: border-box;
 }
 
-.container * {
-	border: 2px solid #333;
-	margin: 0 -5px;
-}
+.container * {border: 2px solid #333;margin: 0 -5px;}
 
-header {
-	grid-area: header;
-}
+header {grid-area: header;}
+.box1 {grid-area: box1;}
+.box2 {grid-area: box2;}
+.box3 {grid-area: box3;}
+content {grid-area: content;}
+aside {grid-area: sidebar;}
+.footersection1 {grid-area: footersection1;}
+.footersection2 {grid-area: footersection2;}
+.footersection3 {grid-area: footersection3;}
+.footersection4 {grid-area: footersection4;}
 
-.box1 {
-	grid-area: box1;
-}
-
-.box2 {
-	grid-area: box2;
-}
-
-.box3 {
-	grid-area: box3;
-}
-
-content {
-	grid-area: content;
-}
-
-aside {
-	grid-area: sidebar;
-}
-
-.footersection1 {
-	grid-area: footersection1;
-}
-
-.footersection2 {
-	grid-area: footersection2;
-}
-
-.footersection3 {
-	grid-area: footersection3;
-}
-
-.footersection4 {
-	grid-area: footersection4;
-}
-
-[class*=footersection] {
-	margin: 5px;
-}
+[class*=footersection] {margin: 5px;}
 
 /* Mobile */
 .container {
@@ -102,11 +68,9 @@ footer {
 	grid-template-areas: 
 	"footersection1 footersection2"
 	"footersection3 footersection4";
-}
-	
-}
+}}
 
-/* Tablets */
+/* Smaller desktop */
 @media only screen and (min-width: 960px) and (max-width: 1200px){
 .container {
 	grid-gap: 2% 3%;
@@ -116,8 +80,7 @@ footer {
 	"header header header header header header header header header header header header"
 	"box1 box1 box1 box2 box2 box2 box2 box2 box2 box3 box3 box3"
 	"content content content content content content content content sidebar sidebar sidebar sidebar"
-	"footer footer footer footer footer footer footer footer footer footer footer footer "
-	;
+	"footer footer footer footer footer footer footer footer footer footer footer footer ";
 }
 
 footer {
@@ -125,14 +88,11 @@ footer {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-areas: 
 	"footersection1 footersection1 footersection1 footersection2 footersection2 footersection2 footersection3 footersection3 footersection3 footersection4 footersection4 footersection4"
-}
-	
-}
+}}
 
-/* Tablets */
+/* Big desktop */
 @media only screen and (min-width: 1200px){
 .container {
-	
 	grid-gap: 2% 2%;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(4, minmax(200px,auto));
@@ -140,8 +100,7 @@ footer {
 	"header header header header header header header header header header header header"
 	"box1 box1 box2 box2 box2 box2 box2 box2 box2 box2 box3 box3"
 	"content content content content content content content content content sidebar sidebar sidebar"
-	"footer footer footer footer footer footer footer footer footer footer footer footer "
-	;
+	"footer footer footer footer footer footer footer footer footer footer footer footer ";
 }
 
 footer {	
@@ -149,9 +108,4 @@ footer {
 	grid-template-rows: minmax(250px, 200px);
 	grid-template-areas: 
 	"footersection1 footersection1 footersection1 footersection2 footersection2 footersection2 footersection3 footersection3 footersection3 footersection4 footersection4 footersection4"
-}
-	
-}
-
-
-
+}}
